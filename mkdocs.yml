@@ -1,0 +1,64 @@
+site_name: QueryLog
+site_url: https://docs-Banco-script-relatorio.org/mysite
+
+theme:
+  name: material
+  logo: assets/images/logo-ciss-white-2022.png
+  favicon: assets/images/logo-ciss-white-2022.png
+
+  custom_dir: overrides
+
+  palette:
+      # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default 
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+
+  features:
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.prune 
+    - navigation.indexes
+    - content.code.copy
+
+# Extenções
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+
+
+# Navegação do site
+nav:
+  - Home: index.md
+
+  - Scripts:
+      - Boas Praticas desenvolvimento SQL: scripts/boas-praticas.md
+      - Gerar plano de acesso: scripts/explain.md
+
+  - Relatórios:
+      - Código de Barras: relatorios/codigo-barras.md
+      - Tree View: relatorios/tree-view.md
+    
