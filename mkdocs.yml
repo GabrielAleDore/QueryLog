@@ -1,5 +1,5 @@
 site_name: QueryLog
-site_url: https://QueyLog.com
+site_url: https://QueryLog.com
 
 repo_name: QueryLog
 repo_url: https://github.com/GabrielAleDore/QueryLog
@@ -45,6 +45,7 @@ theme:
     - navigation.prune 
     - navigation.indexes
     - content.code.copy
+    - header.autohide
 
 # Extenções
 markdown_extensions:
@@ -52,6 +53,9 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.superfences
 
+#Personalizações
+#extra_css:
+#  - assets/stylesheets/cabecalho.css
 
 # Navegação do site
 nav:
