@@ -1,5 +1,8 @@
 site_name: QueryLog
-site_url: https://docs-Banco-script-relatorio.org/mysite
+site_url: https://QueyLog.git.io/mysite
+
+repo_name: QueryLog
+repo_url: https://github.com/GabrielAleDore/QueryLog
 
 theme:
   name: material
