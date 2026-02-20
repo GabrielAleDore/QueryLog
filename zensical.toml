@@ -1,0 +1,110 @@
+# ============================================================================
+#
+# The configuration produced by default is meant to highlight the features
+# that Zensical provides and to serve as a starting point for your own
+# projects.
+#
+# ============================================================================
+
+[project]
+    site_name = "QueryLog"
+    site_url = "https://QueryLog.io"
+
+    site_description = "Site de documentos dos time de Script, Relatórios e Banco de Dados"
+
+    site_author = "Gabriel Alessandro Doré"
+
+    extra_css = ["stylesheets/colors.css"]
+# ================================================================================
+# Estecho é repostavel por organizar toda a navegação
+# ================================================================================
+nav = [
+
+    {"Home" = "index.md"},
+
+    {"Script" = [
+        {"Home Script" = "script/index-script.md"},
+        {"Processos" = [
+            {"Contato com clientes" = "script/processos/contato-clientes.md"},
+            {"Acessos" = "script/processos/acessos.md"}
+        ]},
+        {"Documentos" = [
+            {"Desativa controle de lote" = "script/documentos/desativa-controle-lote.md"},
+            {"Reprocessamento de estoque" = "script/documentos/reprocessamento-estoque.md"}
+        ]}
+    ]}
+
+]
+
+
+[project.theme]
+    font.text = "Inter"
+    font.code = "JetBrains Mono"
+    features = [
+        "navigation.tabs",               # Guias de navegação
+#        "navigation.tabs.sticky",        # Abas de navegação fixa
+#        "navigation.sections",
+        "navigation.top",                # Botão voltar ao topo
+        "navigation.instant",            # Navegação instantânea
+        "navigation.instant.prefetch",   # Pré-busca instantânea
+        "navigation.instant.progress",   # Indicador de progresso
+        "navigation.tracking",           # Rastreamento de âncora
+#        "navigation.sections",           # Seções de navegação
+#        "navigation.expand",             # Expansão de navegação
+        "navigation.path",               # Caminho de navegação
+#        "navigation.prune",              # poda de navegação (Casos tenha muita coisa)
+        "navigation.indexes",            # Páginas de índice da seção
+#        "toc.integrate",                 # Integera toda a navegação
+        "content.code.copy",             # Botão para copiar código
+        "content.code.select",           # Botão de seleção de código
+        "search.highlight"              # Destaca a pesquisa
+
+    ]
+
+
+[project.markdown_extensions.admonition]
+[project.markdown_extensions.pymdownx.details]
+[project.markdown_extensions.pymdownx.superfences]
+
+# Automatic mode
+[[project.theme.palette]]
+    media = "(prefers-color-scheme)"
+    toggle.icon = "lucide/sun-moon"
+    toggle.name = "Switch to light mode"
+
+# Light mode
+[[project.theme.palette]]
+    media = "(prefers-color-scheme: light)"
+    scheme = "default"
+    toggle.icon = "lucide/sun"
+    toggle.name = "Switch to dark mode"
+
+# Dark mode
+[[project.theme.palette]]
+    media = "(prefers-color-scheme: dark)"
+    scheme = "slate"
+    toggle.icon = "lucide/moon"
+    toggle.name = "Switch to system preference"
+
+# Cookies do site
+[project.extra.consent]
+    title = "Cookie consent"
+    description = """
+        Usamos cookies para reconhecer suas visitas repetidas e preferências, bem como para 
+        medir a eficácia de nossa documentação e se os usuários encontram o que procuram. 
+        Com seu consentimento, você nos ajuda a melhorar nossa documentação.
+    """ 
+
+[project.markdown_extensions.attr_list]
+
+# ================================================================================
+# Adiciona abreviações
+[project.markdown_extensions.pymdownx.snippets]
+auto_append = ["includes/abbreviations.md"]
+
+[project.markdown_extensions.pymdownx.emoji]
+    emoji_index = "zensical.extensions.emoji.twemoji"
+    emoji_generator = "zensical.extensions.emoji.to_svg"
+    options.custom_icons = ["overrides/.icons"]
+
+    
